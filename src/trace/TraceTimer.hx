@@ -39,7 +39,7 @@ class TraceTimer
         var delta = getTimer() - lastTimer;
         resetTimer();
         
-        oldTrace(delta + "ms," + v, infos);
+        if ( v != "" ) oldTrace(delta + "ms," + v, infos);
       };
     }
   }
