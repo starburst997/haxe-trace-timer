@@ -1,5 +1,7 @@
 package;
 
+import trace.TraceTimer;
+
 // Tests
 enum Tests
 {
@@ -19,9 +21,11 @@ class TestTimer
   public function new()
   {
     trace("TestTimer Launch");
-
+    
+    TraceTimer.activate();
+    
     var test = Stress1;
-
+    
     switch(test)
     {
       case Stress1: stressTest1();
@@ -31,6 +35,30 @@ class TestTimer
   // Simply load a URL and do nothing else
   function stressTest1()
   {
+    // 0ms,Start
+    trace("Start");
+    
+    // Do something...
+    var a = 0;
+    for ( i in 0...1000000 )
+    {
+      a++;
+    }
 
+    // 20ms,Finished
+    trace("Finished");
+    
+    // 0ms,Start
+    trace("Start 2");
+    
+    // Do something...
+    var a = 0;
+    for ( i in 0...10000000 )
+    {
+      a++;
+    }
+
+    // 20ms,Finished
+    trace("Finished 2");
   }
 }

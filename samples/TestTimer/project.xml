@@ -15,7 +15,7 @@
   <haxelib name="stats" />
   <haxelib name="trace-timer" />
 
-	<assets path="Assets" rename="assets" />
+	<!--<assets path="Assets" rename="assets" />-->
 
   <config:ios deployment="6.0" />
 
