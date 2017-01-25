@@ -58,18 +58,18 @@ class TraceTimer
   // Return number of milliseconds since program start
   public static inline function getTimer():Int
   {
-		#if (openfl || flash)
-		return Lib.getTimer();
-		#elseif js
-		return cast Date.now().getTime();
-		#elseif (!disable_cffi && !macro)
-		return cast NativeCFFI.lime_system_get_timer();
-		#elseif cpp
-		return Std.int(untyped __global__.__time_stamp() * 1000);
-		#elseif sys
-		return Std.int(Sys.time() * 1000);
-		#else
-		return 0;
-		#end
+    #if (openfl || flash)
+    return Lib.getTimer();
+    #elseif js
+    return cast Date.now().getTime();
+    #elseif (!disable_cffi && !macro)
+    return cast NativeCFFI.lime_system_get_timer();
+    #elseif cpp
+    return Std.int(untyped __global__.__time_stamp() * 1000);
+    #elseif sys
+    return Std.int(Sys.time() * 1000);
+    #else
+    return 0;
+    #end
   }
 }
