@@ -1,12 +1,12 @@
 {
-	"name" : "trace-timer",
-	"url" : "https://github.com/starburst997/haxe-trace-timer",
+  "name" : "trace-timer",
+  "url" : "https://github.com/starburst997/haxe-trace-timer",
   "tags": ["trace", "timer", "benchmark"],
-	"license" : "MIT",
+  "license" : "MIT",
   "description" : "Inject timer information in trace statement",
   "version" : "1.0.0",
   "classPath": "src/",
-	"releasenote" : "Initial release",
-	"contributors" : ["starburst997"],
-	"dependencies" : {}
+  "releasenote" : "Initial release",
+  "contributors" : ["starburst997"],
+  "dependencies" : {}
 }
