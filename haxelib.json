@@ -4,9 +4,9 @@
   "tags": ["trace", "timer", "benchmark"],
   "license" : "MIT",
   "description" : "Inject timer information in trace statement",
-  "version" : "1.0.0",
+  "version" : "2.0.0",
   "classPath": "src/",
-  "releasenote" : "Initial release",
+  "releasenote" : "Changed package name because of conflict with reserved keyword",
   "contributors" : ["starburst997"],
   "dependencies" : {}
 }

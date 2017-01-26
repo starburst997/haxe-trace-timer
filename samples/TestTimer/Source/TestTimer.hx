@@ -1,6 +1,6 @@
 package;
 
-import trace.TraceTimer;
+import statistics.TraceTimer;
 import statistics.Stats;
 
 // Tests
