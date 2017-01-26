@@ -1,4 +1,5 @@
 -lib trace-timer
+-lib statistics
 -cp Source
 -js Server/js/TestTimer.js
 -main Main

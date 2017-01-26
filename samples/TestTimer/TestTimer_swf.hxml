@@ -1,4 +1,5 @@
 -lib trace-timer
+-lib statistics
 -cp Source
 -swf Server/TestTimer.swf
 -swf-header 800:600:60:FFFFFF

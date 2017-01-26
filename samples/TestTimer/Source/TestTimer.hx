@@ -1,6 +1,7 @@
 package;
 
 import trace.TraceTimer;
+import statistics.Stats;
 
 // Tests
 enum Tests
@@ -17,15 +18,17 @@ enum Tests
  */
 class TestTimer
 {
+  var stats:Stats = new Stats();
+
   // Run some tests
   public function new()
   {
     trace("TestTimer Launch");
-    
+
     TraceTimer.activate();
-    
+
     var test = Stress1;
-    
+
     switch(test)
     {
       case Stress1: stressTest1();
@@ -37,7 +40,7 @@ class TestTimer
   {
     // 0ms,Start
     trace("Start");
-    
+
     // Do something...
     var a = 0;
     for ( i in 0...1000000 )
@@ -47,10 +50,10 @@ class TestTimer
 
     // 20ms,Finished
     trace("Finished");
-    
+
     // 0ms,Start
     trace("Start 2");
-    
+
     // Do something...
     var a = 0;
     for ( i in 0...10000000 )
