@@ -38,12 +38,19 @@ class TraceTimer
       {
         var delta = getTimer() - lastTimer;
         resetTimer();
-
-        if ( v != "" ) oldTrace(delta + "ms," + v, infos);
+        
+        #if js
+        if ( untyped __strict_neq__(v, "") )
+        #else
+        if ( v != "" )
+        #end
+        {
+          oldTrace(delta + "ms," + v, infos);
+        }
       };
     }
   }
-
+  
   // Deactivate
   public static function deactivate()
   {
